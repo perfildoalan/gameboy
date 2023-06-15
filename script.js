@@ -40,7 +40,7 @@ function parabens (time) {
     var elementoParabens = document.getElementById("black-paper")
     elementoParabens.classList.remove("black-paper-off")
     var textoTempo = document.getElementById("tempo-venceu")
-    textoTempo.innerText = textoTempo.innerText + parseInt(time/1000) + " segundos";
+    textoTempo.innerText = textoTempo.innerText + " " + parseInt(time/1000) + " segundos";
   }
   setTimeout(parabensEtapa1, 300);
 }
