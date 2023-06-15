@@ -1,0 +1,68 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fliperama</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="black-paper-off" id="black-paper">
+        <div id="retangulo-venceu">
+            <p id="parabens">PARABÉNS</p>
+            <p id="tempo-venceu">Você venceu em </p>
+        </div>
+    </div>
+    <div id="maquina">
+        <div id="borda-tela">
+            <p><span>&nbsp;&nbsp;DOT MATRIX WITH STEREO SOUND&nbsp;&nbsp;</span></p>
+            <hr id="linha-tela-1">
+            <hr id="linha-tela-2">
+            <div id="bateria">
+                <div id="circulo-bateria"></div>
+                <p>bateria</p>
+            </div>
+            <div id="tela">
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+        <div id="logos"><img src="assets/nintenndo.png" alt="logo da nintendo">&nbsp;&nbsp;<img src="assets/gameboy.png" alt="logo do game boy">TM</div>
+        <div id="relevo-botoes">
+        <div id="circulo-botao-principal">
+            <div class="botoes-principais" id="botao-top">🔼</div>
+            <div class="botoes-principais" id="botao-left">◀️</div>
+            <div class="botoes-principais" id="botao-right">▶️</div>
+            <div class="botoes-principais" id="botao-down">🔽</div>
+        </div>
+        <div id="circulo-botao-secundario">
+            <div id="botao-A"></div>
+            <div id="botao-B"></div>
+            <div id="texto-botoes-AeB"><span id="texto-A" class="texto-botoes">A</span><span id="texto-B" class="texto-botoes">B</span></div>
+        </div>
+        <div id="circulo-botao-select">
+            <div id="botao-select"><span id="texto-select" class="texto-botoes">select</span></div>
+        </div>
+        <div id="circulo-botao-start">
+            <div id="botao-start"><span id="texto-start" class="texto-botoes">start</span></div>
+        </div>
+        </div>
+        <div id="saida-de-som">
+            <div class="furo-do-som"></div>
+            <div class="furo-do-som"></div>
+            <div class="furo-do-som"></div>
+            <div class="furo-do-som"></div>
+            <div class="furo-do-som"></div>
+            <div class="furo-do-som"></div>
+        </div>
+    </div>
+    <div id="instrucoes">
+        <p class="textoMedio" id="titulo-instrucoes">Instruções</p>
+        <hr>
+        <img id="img-botao-direcional" src="assets/directionals.png" alt="botões direcionais">
+        <p class="textoPequeno"> Use os botões direcionais para mover o círculo</p>
+        <img id="img-botao-enter" src="assets/enter.png" alt="botão enter">
+        <p class="textoPequeno"> Use o botão enter para selecionar e iniciar</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
