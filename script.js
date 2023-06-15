@@ -70,7 +70,7 @@ function botoesSelecionados (botao) {
 
 function start (){
 
-  const start = Date.now();
+  var start;
 
   var botaoStart = document.getElementById("botao-start")
   botaoStart.classList.add("botao-start-select-selecionado")
@@ -143,7 +143,15 @@ function start (){
 
     window.addEventListener("keydown", keydownHandler, false);
 
+    var tempoInicial = false
+
     function keydownHandler (evento) {
+      
+      if (tempoInicial == false) {
+        tempoInicial = true
+        start = Date.now()
+      }
+
       var valorTecla = evento.keyCode
       if (valorTecla === left && maze[player.rowPlayer][player.columnPlayer-1] !== 1) {
         maze[player.rowPlayer][player.columnPlayer] = 0
