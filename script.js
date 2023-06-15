@@ -1,12 +1,11 @@
-// const valorTextoInicial = document.createTextNode("Bem-vindo");
-// const elementoDoTextoInicial = document.createElement("p");
-// // elementoDoTextoInicial.style.zIndex = 2;
-// elementoDoTextoInicial.appendChild(valorTextoInicial);
-// elementoDoTextoInicial.id = 'textoInicial';
-// elementoDoTextoInicial.className = "textoInicial";
+const TextoBemVindo = document.getElementById("canvas");
+const contexto = canvas.getContext("2d");
 
-// var textoInicialNaTela = document.getElementById('tela');
-// textoInicialNaTela.appendChild(elementoDoTextoInicial);
+var tamanhoTextoBemVindo = 50;
+contexto.font = tamanhoTextoBemVindo + "px BebasNeue";
+contexto.fillStyle = "black";
+contexto.textAlign = "center";
+contexto.fillText("Bem-Vindo", canvas.width/2, canvas.height/2 + tamanhoTextoBemVindo/4);
 
 
 
