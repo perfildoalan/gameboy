@@ -5,7 +5,8 @@ var tamanhoTextoBemVindo = 50;
 contexto.font = tamanhoTextoBemVindo + "px BebasNeue";
 contexto.fillStyle = "black";
 contexto.textAlign = "center";
-contexto.fillText("Bem-Vindo", canvas.width/2, canvas.height/2 + tamanhoTextoBemVindo/4);
+contexto.textBaseline = "middle";
+contexto.fillText("Bem-Vindo", canvas.width/2, canvas.height/2);
 
 
 
