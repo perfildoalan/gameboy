@@ -1,14 +1,15 @@
 const TextoBemVindo = document.getElementById("canvas");
 const contexto = canvas.getContext("2d");
 
-var tamanhoTextoBemVindo = 50;
-contexto.font = tamanhoTextoBemVindo + "px BebasNeue";
-contexto.fillStyle = "black";
-contexto.textAlign = "center";
-contexto.textBaseline = "middle";
-contexto.fillText("Bem-Vindo", canvas.width/2, canvas.height/2);
-
-
+window.addEventListener("load", escreveNomeBemvindo, false);
+function escreveNomeBemvindo () {
+  var tamanhoTextoBemVindo = 50;
+  contexto.font = tamanhoTextoBemVindo + "px BebasNeue";
+  contexto.fillStyle = "black";
+  contexto.textAlign = "center";
+  contexto.textBaseline = "middle";
+  contexto.fillText("Bem-Vindo", canvas.width/2, canvas.height/2);
+}
 
 //-----------------------------------------------------------------------------
 
