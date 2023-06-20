@@ -48,8 +48,8 @@ var valorDoLabirinto = {
   ]
 }
 
-var fase = 0
-var maze = valorDoLabirinto["maze" + fase]
+var faseInicial = 0
+var maze = valorDoLabirinto["maze" + faseInicial]
 
 //------------------------------------------------------------------------------
 
@@ -86,14 +86,33 @@ function enterJogo (evento) {
   }
 }
 
+//-----------------------------------------------------------------------------
+
+function fase (fase) {
+  var elementoFase = document.getElementById("black-paper");
+  elementoFase.classList.remove("black-paper-off");
+  var textoFase = document.getElementById("texto-principal");
+  textoFase.style.marginTop = "60px";
+  console.log(textoFase.attributes);
+  textoFase.innerText = "FASE " + fase;
+  function faseApaga () {
+    elementoFase.classList.add("black-paper-off");
+  }
+  setTimeout(faseApaga, 2000);
+}
+
+
 // ----------------------------------------------------------------------------
 
 function parabens (time) {
   function parabensEtapa1 () {
-    var elementoParabens = document.getElementById("black-paper")
-    elementoParabens.classList.remove("black-paper-off")
-    var textoTempo = document.getElementById("tempo-venceu")
-    textoTempo.innerText = textoTempo.innerText + " " + parseInt(time/1000) + " segundos";
+    var elementoParabens = document.getElementById("black-paper");
+    elementoParabens.classList.remove("black-paper-off");
+    var textoParabens = document.getElementById("texto-principal");
+    textoParabens.style.marginTop = "20px";
+    textoParabens.innerText = "PARABÉNS";
+    var textoTempo = document.getElementById("texto-secundario");
+    textoTempo.innerText = "Você venceu em " + parseInt(time/1000) + " segundos";
   }
   setTimeout(parabensEtapa1, 300);
 }
@@ -142,8 +161,6 @@ function start (){
   video.src = 'assets/gameboy.mp4';
   video.width = "800";
   video.height = "720";
-
-  console.log(video.width, video.height);
 
   const tela = document.getElementById("tela");
   tela.appendChild(video);
@@ -237,10 +254,10 @@ function start (){
     }
 
     function ganhador () {
-      if (fase < 1 && player.rowPlayer === posicaoGanhador.rowGanhador && player.columnPlayer === posicaoGanhador.columnGanhador) {
-        
-        fase++
-        maze = valorDoLabirinto["maze" + fase]
+      if (faseInicial < 1 && player.rowPlayer === posicaoGanhador.rowGanhador && player.columnPlayer === posicaoGanhador.columnGanhador) {
+        faseInicial++;
+        fase(faseInicial+1);
+        maze = valorDoLabirinto["maze" + faseInicial]
       }
       else if (player.rowPlayer === posicaoGanhador.rowGanhador && player.columnPlayer === posicaoGanhador.columnGanhador) {
         window.removeEventListener("keydown", keydownHandler);
