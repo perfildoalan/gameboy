@@ -69,7 +69,8 @@ function escreveNomeBemvindo () {
 //-----------------------------------------------------------------------------
 
 const circuloBotaoStart = document.getElementById("circulo-botao-start")
-circuloBotaoStart.addEventListener("click", start)
+circuloBotaoStart.addEventListener("click", enterJogo);
+circuloBotaoStart.valor = 'click'
 window.addEventListener("keydown", enterJogo, false);
 
 // var elementoBlackPaper = document.getElementById("black-paper")
@@ -77,9 +78,11 @@ window.addEventListener("keydown", enterJogo, false);
 
 function enterJogo (evento) {
   var valorEnter = evento.keyCode
-  if (valorEnter == 13) {
+  var valorClick = evento.currentTarget.valor
+  if (valorEnter == 13 || valorClick == 'click') {
     start ();
     window.removeEventListener("keydown", enterJogo);
+    circuloBotaoStart.removeEventListener("click", enterJogo);
   }
 }
 
@@ -137,8 +140,10 @@ function start (){
   const video = document.createElement('video');
   video.id = 'video-gameboy';
   video.src = 'assets/gameboy.mp4';
-  video.width = 800;
-  video.height = 720;
+  video.width = "800";
+  video.height = "720";
+
+  console.log(video.width, video.height);
 
   const tela = document.getElementById("tela");
   tela.appendChild(video);
@@ -233,11 +238,16 @@ function start (){
 
     function ganhador () {
       if (fase < 1 && player.rowPlayer === posicaoGanhador.rowGanhador && player.columnPlayer === posicaoGanhador.columnGanhador) {
+        
         fase++
         maze = valorDoLabirinto["maze" + fase]
       }
       else if (player.rowPlayer === posicaoGanhador.rowGanhador && player.columnPlayer === posicaoGanhador.columnGanhador) {
         window.removeEventListener("keydown", keydownHandler);
+        botaoLeft.removeEventListener("click", keydownHandler);
+        botaoTop.removeEventListener("click", keydownHandler);
+        botaoRight.removeEventListener("click", keydownHandler);
+        botaoDown.removeEventListener("click", keydownHandler);
         const end = Date.now();
         parabens(end-start);
       }
