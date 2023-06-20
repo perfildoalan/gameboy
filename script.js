@@ -1,3 +1,58 @@
+var valorDoLabirinto = {
+  maze0: [
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+    [1,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,1],
+    [1,0,1,0,0,1,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,1,0,1],
+    [1,0,1,0,0,1,0,1,0,1,1,1,1,1,1,1,0,1,1,1,1,0,1,0,1],
+    [1,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1],
+    [1,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,1],
+    [1,0,1,0,0,1,0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,1],
+    [1,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,1,1,1,1,1,0,1],
+    [1,0,1,0,0,1,1,1,1,1,1,1,1,0,1,0,1,0,1,0,0,0,1,0,1],
+    [1,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,1,1,0,1,0,1],
+    [1,0,1,1,1,1,1,1,1,1,0,0,1,0,1,0,1,0,0,0,0,0,1,0,1],
+    [1,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,1,1,1,1,1,1,1,0,1],
+    [1,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,1],
+    [1,0,1,1,1,1,1,1,1,1,0,0,1,0,1,1,1,1,1,1,1,1,1,0,1],
+    [1,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1],
+    [1,0,1,0,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,0,1,0,1],
+    [1,0,1,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,1,0,1],
+    [1,0,0,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+  ],
+
+  maze1: [
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+    [1,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,1],
+    [1,0,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,1],
+    [1,0,1,0,1,0,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,0,1,0,1],
+    [1,0,1,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1],
+    [1,0,1,0,1,0,1,0,0,0,0,0,0,0,0,1,0,1,1,1,1,1,1,0,1],
+    [1,0,1,0,1,0,1,1,1,1,1,1,1,1,0,1,0,1,0,0,0,0,0,0,1],
+    [1,0,1,0,1,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,1,1,1,0,1],
+    [1,0,1,0,1,1,1,1,1,1,1,1,0,1,0,1,0,1,0,1,0,0,1,0,1],
+    [1,0,1,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,0,1,1,0,1,0,1],
+    [1,0,1,1,1,1,1,1,1,1,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1],
+    [1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,1,1,1,1,1,0,1],
+    [1,0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1],
+    [1,0,1,0,0,1,0,0,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,0,1],
+    [1,0,1,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1],
+    [1,0,1,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1],
+    [1,0,1,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,1,0,1],
+    [1,0,0,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+  ]
+}
+
+var fase = 0
+var maze = valorDoLabirinto["maze" + fase]
+
+//------------------------------------------------------------------------------
+
 const TextoBemVindo = document.getElementById("canvas");
 const contexto = canvas.getContext("2d");
 
@@ -12,12 +67,6 @@ function escreveNomeBemvindo () {
 }
 
 //-----------------------------------------------------------------------------
-
-const video = document.createElement('video');
-video.id = 'video-gameboy';
-video.src = 'assets/gameboy.mp4';
-video.width = 800;
-video.height = 720;
 
 const circuloBotaoStart = document.getElementById("circulo-botao-start")
 circuloBotaoStart.addEventListener("click", start)
@@ -73,6 +122,8 @@ function start (){
 
   var start;
 
+  //--------------------------------------------------------------------------
+
   var botaoStart = document.getElementById("botao-start")
   botaoStart.classList.add("botao-start-select-selecionado")
 
@@ -81,6 +132,13 @@ function start (){
   }
 
   setTimeout(voltarCorBotaoStartSelect, 200);
+
+  //--------------------------------------------------------------------------
+  const video = document.createElement('video');
+  video.id = 'video-gameboy';
+  video.src = 'assets/gameboy.mp4';
+  video.width = 800;
+  video.height = 720;
 
   const tela = document.getElementById("tela");
   tela.appendChild(video);
@@ -97,6 +155,8 @@ function start (){
 
   setTimeout(playVideo, 500);
 
+  //---------------------------------------------------------------------------
+
   function labirinto(){
     var cnv = document.querySelector("canvas")
     var ctx = cnv.getContext("2d")
@@ -104,7 +164,6 @@ function start (){
     var left = 37, up = 38, right = 39, down = 40;
 
     ctx.scale(1, 0.595)
-    var inicialText = "Aperte Enter para começar"
 
     var tileSize = 12;
     var player = {
@@ -118,58 +177,53 @@ function start (){
       columnGanhador: 0,
       rowGanhador: 0,
     }
-    var maze = [
-      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-      [1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
-      [1,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,1],
-      [1,0,1,0,0,1,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,1,0,1],
-      [1,0,1,0,0,1,0,1,0,1,1,1,1,1,1,1,0,1,1,1,1,0,1,0,1],
-      [1,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1],
-      [1,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,1],
-      [1,0,1,0,0,1,0,1,1,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,1],
-      [1,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,1,1,1,1,1,0,1],
-      [1,0,1,0,0,1,1,1,1,1,1,1,1,0,1,0,1,0,1,0,0,0,1,0,1],
-      [1,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,1,1,0,1,0,1],
-      [1,0,1,1,1,1,1,1,1,1,0,0,1,0,1,0,1,0,0,0,0,0,1,0,1],
-      [1,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,1,1,1,1,1,1,1,0,1],
-      [1,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,1],
-      [1,0,1,1,1,1,1,1,1,1,0,0,1,0,1,1,1,1,1,1,1,1,1,0,1],
-      [1,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1],
-      [1,0,1,0,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,0,1,0,1],
-      [1,0,1,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,1,0,1],
-      [1,0,0,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-      [1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,1],
-      [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-    ];
+    
+    var botaoLeft = document.getElementById("botao-left");
+    botaoLeft.addEventListener("click", keydownHandler, false);
+    botaoLeft.valor = 'botao left';
+
+    var botaoTop = document.getElementById("botao-top");
+    botaoTop.addEventListener("click", keydownHandler, false);
+    botaoTop.valor = 'botao top';
+
+    var botaoRight = document.getElementById("botao-right");
+    botaoRight.addEventListener("click", keydownHandler, false);
+    botaoRight.valor = 'botao right';
+
+    var botaoDown = document.getElementById("botao-down");
+    botaoDown.addEventListener("click", keydownHandler, false);
+    botaoDown.valor = 'botao down';
 
     window.addEventListener("keydown", keydownHandler, false);
 
     var tempoInicial = false
 
     function keydownHandler (evento) {
-      
+
       if (tempoInicial == false) {
         tempoInicial = true
         start = Date.now()
       }
 
       var valorTecla = evento.keyCode
-      if (valorTecla === left && maze[player.rowPlayer][player.columnPlayer-1] !== 1) {
+      var valorBotoes = evento.currentTarget.valor
+
+      if (valorBotoes == 'botao left' && maze[player.rowPlayer][player.columnPlayer-1] !== 1 || valorTecla === left && maze[player.rowPlayer][player.columnPlayer-1] !== 1) {
         maze[player.rowPlayer][player.columnPlayer] = 0
         maze[player.rowPlayer][player.columnPlayer-1] = 2
         botoesSelecionados("botao-left");
       }
-      else if (valorTecla === up && maze[player.rowPlayer-1][player.columnPlayer] !== 1) {
+      else if (valorBotoes == 'botao top' && maze[player.rowPlayer-1][player.columnPlayer] !== 1 || valorTecla === up && maze[player.rowPlayer-1][player.columnPlayer] !== 1) {
         maze[player.rowPlayer][player.columnPlayer] = 0
         maze[player.rowPlayer-1][player.columnPlayer] = 2
         botoesSelecionados("botao-top");
       }
-      else if (valorTecla === right && maze[player.rowPlayer][player.columnPlayer+1] !== 1) {
+      else if (valorBotoes == 'botao right' && maze[player.rowPlayer][player.columnPlayer+1] !== 1 || valorTecla === right && maze[player.rowPlayer][player.columnPlayer+1] !== 1) {
         maze[player.rowPlayer][player.columnPlayer] = 0
         maze[player.rowPlayer][player.columnPlayer+1] = 2
         botoesSelecionados("botao-right");
       }
-      else if (valorTecla === down && maze[player.rowPlayer+1][player.columnPlayer] !== 1) {
+      else if (valorBotoes == 'botao down' && maze[player.rowPlayer+1][player.columnPlayer] !== 1 || valorTecla === down && maze[player.rowPlayer+1][player.columnPlayer] !== 1) {
         maze[player.rowPlayer][player.columnPlayer] = 0
         maze[player.rowPlayer+1][player.columnPlayer] = 2
         botoesSelecionados("botao-down");
@@ -178,7 +232,11 @@ function start (){
     }
 
     function ganhador () {
-      if (player.rowPlayer === posicaoGanhador.rowGanhador && player.columnPlayer === posicaoGanhador.columnGanhador) {
+      if (fase < 1 && player.rowPlayer === posicaoGanhador.rowGanhador && player.columnPlayer === posicaoGanhador.columnGanhador) {
+        fase++
+        maze = valorDoLabirinto["maze" + fase]
+      }
+      else if (player.rowPlayer === posicaoGanhador.rowGanhador && player.columnPlayer === posicaoGanhador.columnGanhador) {
         window.removeEventListener("keydown", keydownHandler);
         const end = Date.now();
         parabens(end-start);
